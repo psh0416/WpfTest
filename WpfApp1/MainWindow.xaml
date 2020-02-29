@@ -1,0 +1,140 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d" Background="#FF0F0F0F"
+        Title="MainWindow" Height="969" Width="1292">
+    <Window.Resources>
+        
+        
+
+
+
+    </Window.Resources>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel VerticalAlignment="Center">
+            <Button Width="100" Height="28" Content="ECDIS" FontSize="12" Margin="5"/>
+            <TextBox Width="100" Height="30" Margin="5"/>
+            <ToggleButton Width="100" Height="30" Content="ECDIS"/>
+        </StackPanel>
+        <GroupBox Foreground="#FFA98B6C" Header="GroupBox" HorizontalAlignment="Left" Height="100" Margin="335,297,0,0" VerticalAlignment="Top" Width="100" Style="{DynamicResource GroupBoxStyle1}"/>
+        <Grid Grid.Column="1" Background="#FF404040">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="36"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Border Grid.ColumnSpan="2">
+                <Border.Background>
+                    <VisualBrush TileMode="Tile" Stretch="Uniform" Viewport="4,4,4,4" ViewportUnits="Absolute" Viewbox="0,0,1,1">
+                        <VisualBrush.Transform>
+                            <RotateTransform Angle="45"/>
+                        </VisualBrush.Transform>
+                        <VisualBrush.Visual>
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Rectangle Width="5" Height="5" Fill="#77000000" Margin="2" />
+                                <Rectangle Width="5" Height="5" Fill="#22FFFFFF" Margin="2" Grid.Row="1" Grid.Column="1"/>
+
+
+                            </Grid>
+
+
+                        </VisualBrush.Visual>
+                    </VisualBrush>
+                </Border.Background>
+            </Border>
+            <StackPanel >
+                <ToggleButton Width="32" Height="32" HorizontalAlignment="Left" Margin="0,0,0,7"/>
+                <ToggleButton Width="32" Height="32" HorizontalAlignment="Left" Margin="0,0,0,1">
+                    <StackPanel>
+                        <TextBlock Text="N"  HorizontalAlignment="Center" Margin="0,-2,0,-2" FontWeight="Bold"/>
+                        <TextBlock Text="UP" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,-2,0,0"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Width="32" Height="32" HorizontalAlignment="Left" Margin="0,0,0,1">
+                    <StackPanel>
+                        <TextBlock Text="H"  HorizontalAlignment="Center" Margin="0,-2,0,-2" FontWeight="Bold"/>
+                        <TextBlock Text="UP" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,-2,0,0"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Width="32" Height="32" HorizontalAlignment="Left" Margin="0,0,0,7">
+                    <StackPanel>
+                        <TextBlock Text="C"  HorizontalAlignment="Center" Margin="0,-2,0,-2" FontWeight="Bold"/>
+                        <TextBlock Text="UP" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,-2,0,0"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Content="RM" Width="32" Height="32" HorizontalAlignment="Left" Margin="0,0,0,1"/>
+                <ToggleButton Content="TM" Width="32" Height="32" HorizontalAlignment="Left" Margin="0,0,0,7"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <StackPanel Orientation="Horizontal" Margin="1">
+                    <ToggleButton Width="65" Height="30" Content="ECDIS" Margin="0,0,1,0"/>
+                    <ToggleButton Width="64" Height="30" Content="RADAR" Margin="0,0,1,0" IsEnabled="False"/>
+                    <ToggleButton Width="75" Height="30" Content="Conning" Margin="0,0,1,0"/>
+                    <ToggleButton Width="54" Height="30" Content="AMS" Margin="0,0,1,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="1">
+                    <ToggleButton Width="64" Height="30" Content="ARPA" Margin="0,0,1,0"/>
+                    <ToggleButton Width="64" Height="30" Content="AIS" Margin="0,0,1,0"/>
+                    <ToggleButton Width="64" Height="30" Content="CHART" Margin="0,0,1,0"/>
+                    <ToggleButton Width="64" Height="30" Content="MAP" Margin="0,0,1,0"/>
+                </StackPanel>
+                <TextBox Width="100" Height="30" Margin="5" />
+                <ProgressBar Value="50" HorizontalAlignment="Left" Height="28" Width="140" Margin="4" VerticalAlignment="Top" />
+
+                <TabControl Height="200" Margin="10" >
+                    <TabItem Header="TabItem" Style="{DynamicResource TabItemStyle1}">
+                        <Grid >
+                            <GroupBox Margin="2" Foreground="#FFA98B6C" Header="GroupBox">
+                                <StackPanel>
+                                    <CheckBox HorizontalAlignment="Left" Width="64" Height="30" Content="ARPA" Margin="0,0,1,0" Style="{StaticResource CheckBoxToggleButton}"/>
+                                    <CheckBox HorizontalAlignment="Left" Width="64" Height="30" Content="ARPA" Margin="0,0,1,0" Style="{StaticResource CheckBoxToggleButton}" IsEnabled="False"/>
+                                    <CheckBox HorizontalAlignment="Left" Width="64" Height="30" Content="ARPA" Margin="0,0,1,0" Style="{StaticResource CheckBoxToggleButton}"/>
+                                </StackPanel>
+
+                            </GroupBox>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="TabItem" Style="{DynamicResource TabItemStyle1}">
+                        <TabControl TabStripPlacement="Bottom">
+                            <TabItem Header="TabItem" Style="{DynamicResource TabItemStyle1}">
+                                <Grid >
+                                    <GroupBox Margin="2" Foreground="#FFA98B6C" Header="GroupBox">
+                                        <StackPanel>
+                                            <CheckBox HorizontalAlignment="Left" Width="64" Height="30" Content="ARPA" Margin="0,0,1,0" Style="{StaticResource CheckBoxToggleButton}"/>
+                                            <CheckBox HorizontalAlignment="Left" Width="64" Height="30" Content="ARPA" Margin="0,0,1,0" Style="{StaticResource CheckBoxToggleButton}" IsEnabled="False"/>
+                                            <CheckBox HorizontalAlignment="Left" Width="64" Height="30" Content="ARPA" Margin="0,0,1,0" Style="{StaticResource CheckBoxToggleButton}"/>
+                                        </StackPanel>
+
+                                    </GroupBox>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Header="TabItem" Style="{DynamicResource TabItemStyle1}">
+                                <Grid Background="Transparent"/>
+                            </TabItem>
+                        </TabControl>
+                    </TabItem>
+                </TabControl>
+                <ComboBox Width="250" Height="28" Margin="2" >
+                    <ComboBoxItem IsSelected="True" Content="By Name" />
+                    <ComboBoxItem Content="By Name2"/>
+                </ComboBox>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>
